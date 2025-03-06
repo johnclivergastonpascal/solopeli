@@ -1,0 +1,123 @@
+/* Reseteo de márgenes y padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: black;
+    color: white; 
+}
+
+/* Estilo del header y la barra de navegación */
+header {
+    background-color: #333;
+    padding: 10px 20px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+nav .logo {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+nav .menu {
+    list-style: none;
+    display: flex;
+}
+
+nav .menu li {
+    margin-left: 20px;
+}
+
+nav .menu a {
+    color: white;
+    text-decoration: none;
+    padding: 8px 16px;
+    display: block;
+}
+
+nav .menu a:hover {
+    background-color: #575757;
+    border-radius: 5px;
+}
+
+/* Estilo para el icono del menú hamburguesa */
+nav .hamburger {
+    display: none;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+}
+
+/* Estilos para pantallas pequeñas */
+@media screen and (max-width: 768px) {
+    nav .menu {
+        display: none;
+        width: 100%;
+        text-align: center;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background-color: #333;
+    }
+
+    nav .menu.active {
+        display: block;
+    }
+
+    nav .menu li {
+        margin: 0;
+        padding: 10px;
+    }
+
+    nav .hamburger {
+        display: block;
+    }
+}
+/* Estilos para el grid de imágenes */
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    justify-content: center;
+}
+
+.grid-item {
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.grid-item img {
+    width: 100%;
+    height: 300px;
+    border-bottom: 2px solid #ddd;
+}
+
+.grid-item h3 {
+    padding: 15px;
+    text-align: center;
+    font-size: 18px;
+    color: #333;
+    background-color: #f8f8f8;
+    margin-top: 10px;
+}
+
+/* Efecto hover */
+.grid-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
