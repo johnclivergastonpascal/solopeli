@@ -59,6 +59,16 @@ nav .hamburger {
     cursor: pointer;
 }
 
+#searchInput {
+    width: 80%;
+    padding: 10px;
+    margin-top: 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+
 /* Estilos para pantallas pequeñas */
 @media screen and (max-width: 768px) {
     nav .menu {
